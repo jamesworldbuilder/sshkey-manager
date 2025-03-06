@@ -1,0 +1,11 @@
+# Ignore all hidden directories
+.*/
+
+# Ignore all hidden files
+.*
+
+# Ignore files ending with ~
+*~
+
+# Exceptions (if needed)
+!.gitignore
