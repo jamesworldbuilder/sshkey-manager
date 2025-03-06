@@ -213,9 +213,9 @@ ERROR: Configured SSH directory does not exist: '/nonexistent/path'
          SSH_DIR=/path/to/ssh_directory/.ssh
 ```
 
-#### Non-standard `SSH_DIR` (e.g., `/home/mint/.mykeys`)
+#### Non-standard `SSH_DIR` (e.g., `/home/user/.mykeys`)
 ```
-WARNING: SSH_DIR does not end with '.ssh' - Found: '/home/mint/.mykeys'
+WARNING: SSH_DIR does not end with '.ssh' - Found: '/home/user/.mykeys'
          This is not a standard SSH directory name
          This is not recommended!
          Configuration file: '/path/to/ssh_key_management_script/ssh_manager_config.env'
@@ -223,13 +223,13 @@ WARNING: SSH_DIR does not end with '.ssh' - Found: '/home/mint/.mykeys'
            SSH_DIR=/path/to/ssh_directory/.ssh
 Would you like to continue anyway? [y/n]:
 ```
-- **Input `y` or `yes`:** Proceeds with `/home/mint/.mykeys`.
+- **Input `y` or `yes`:** Proceeds with `/home/user/.mykeys`.
 - **Input `n` or `no`:** `Operation canceled`.
 - **Invalid Input:** `Invalid input - Please enter yes or no (y/n)` (re-prompts).
 
 #### Failed SSH Directory Creation
 ```
-ERROR: Failed to create SSH_DIR: '/home/mint/.ssh'
+ERROR: Failed to create SSH_DIR: '/home/user/.ssh'
 ```
 
 #### Invalid Choice (Re-prompt)
@@ -309,11 +309,11 @@ Conflict resolution actions for 'id_rsa':
 
 #### File Conflict - Empty Key Name (Re-prompt)
 ```
-Checking existence of: '/home/mint/.ssh/id_rsa'
-Conflict detected: 'id_rsa' already exists in '/home/mint/.ssh'
+Checking existence of: '/home/user/.ssh/id_rsa'
+Conflict detected: 'id_rsa' already exists in '/home/user/.ssh'
 Conflict resolution actions for 'id_rsa':
-  1. "Overwrite" existing file ('/home/mint/.ssh/id_rsa')
-  2. "Rename" file to be copied: ('/media/mint/workspace/Server/sshkey-manager/.ssh/id_rsa')
+  1. "Overwrite" existing file ('/home/user/.ssh/id_rsa')
+  2. "Rename" file to be copied: ('/media/user/source/.ssh/id_rsa')
   3. "Cancel" (or CTRL+C)
   Choose action for 'id_rsa': 2
   Enter new filename (CTRL+C to cancel): 
